@@ -1,0 +1,64 @@
+version: "2.0"
+
+stories:
+
+- story: start
+  steps:
+  - intent: greet
+  - action: utter_greet
+- story: ac_number
+  steps:
+  - intent: ac_number
+  - action: action_ac_number
+- story: new_ac
+  steps:
+  - intent: new_ac
+  - action: utter_new_account
+  - intent: mobile_no
+  - action: action_mobile
+- story: otp
+  steps:
+  - intent: otp
+  - action: action_otp
+- story: transaction
+  steps:
+  - intent: transaction
+  - action: action_transaction
+- story: debit
+  steps:
+  - intent: debit
+  - action: action_debit
+- story: credit
+  steps:
+  - intent: credit
+  - action: action_credit
+- story: balance
+  steps:
+  - intent: balance
+  - action: action_balance
+- story: fixed_deposit
+  steps:
+  - intent: fixed_deposit
+  - action: utter_fd
+  - intent: extra_info
+  - action: utter_extra_info
+- story: mutual_fund
+  steps:
+  - intent: mutual_fund
+  - action: utter_mf
+- story: large_cap
+  steps:
+  - intent: large_cap
+  - action: action_mf
+- story: mid_cap
+  steps:
+  - intent: mid_cap
+  - action: action_mf
+- story: small_cap
+  steps:
+  - intent: small_cap
+  - action: action_mf
+- story: multi_cap
+  steps:
+  - intent: multi_cap
+  - action: action_mf

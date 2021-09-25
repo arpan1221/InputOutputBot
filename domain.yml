@@ -1,0 +1,58 @@
+version: "2.0"
+
+intents:
+  - greet
+  - new_ac
+  - mobile_no
+  - otp
+  - ac_number
+  - transaction
+  - credit
+  - debit
+  - balance
+  - fixed_deposit
+  - extra_info
+  - mutual_fund
+  - large_cap
+  - multi_cap
+  - mid_cap
+  - small_cap
+entities:
+- amount
+- mobile
+- otp
+- ac_number
+slots:
+  amount:
+    type: float
+  mobile:
+    type: float
+  otp: 
+    type: float
+  ac_number:
+    type: float
+responses:
+  utter_greet:
+  - text: "Hi I am the I/O bot\nInput Output Bank is a one stop solution for availing banking solutions at your fingertips\nbelow are the tasks that I can perform for you, type out your requirement.\n⏺️ Create a new A/C\n⏺️ Perform a transaction\n⏺️ Display your Savings A/C balance\n⏺️ Have a chat about Fixed Deposits\n⏺️ Discuss Portfolio Management Strategies\nIf you have already logged in and authenticated yourself enter your account number for continuing"
+  utter_new_account:
+    - text: "Sure! let's get you started with the procedure, please provide your registered Mobile Number for A/C Number Generation"
+  utter_transaction:
+    - text: "Type your transaction type in the format\nI want to Withdraw '5000 rupees'\nor\nDeposit to my account '10000 rupees'"
+  utter_fd:
+    - text: "When it comes to keeping money safe and to build a sense of security it's best to choose a Fixed Deposit would you like to know the Rate of Interest offered by us?"
+  utter_extra_info:
+    - text: "For General Citizens (p.a.) ROI - 6%\nFor Senior Citizens (p.a.) ROI - 8%"
+  utter_mf:
+    - text: "If you seek money growth and are willing to take few risks Portfolio management strategies are for you I can help you choose from the following categories of Mutual Funds to choose from.\n⏺️ Large Cap Funds\n⏺️ Mid Cap Funds\n⏺️ Small Cap Funds\n⏺️ Multi Cap Funds"
+actions:
+- action_mobile
+- action_otp
+- action_transaction
+- action_debit
+- action_credit
+- action_balance
+- action_mf
+- action_ac_number
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

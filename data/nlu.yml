@@ -1,0 +1,124 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: new_ac
+  examples: |
+    - I want to begin by creating a new account
+    - I want to create a new savings account
+    - I require a new account
+    - Create account
+    - Let's start by getting me a new account
+- intent: mobile_no
+  examples: |
+    - [8879166971](mobile)
+    - [9820050285](mobile)
+    - [9930248425](mobile)
+    - [9769558753](mobile)
+    - [9920740538](mobile)
+    - [8850889501](mobile)
+    - [9820683452](mobile)
+    - [8451002912](mobile)
+    - [7506834121](mobile)
+    - [8450937677](mobile)
+- intent: otp
+  examples: |
+    - otp [123456](otp)
+    - otp [789100](otp)
+    - otp [456851](otp)
+    - otp [238791](otp)
+    - otp [964318](otp)
+- intent: ac_number
+  examples: |
+    - [ACCQgnTF3z](ac_number)
+    - [ACBH78cxyg](ac_number)
+    - [ACoyt5Hgy7](ac_number)
+    - [AC98NtckOp](ac_number)
+- intent: transaction
+  examples: | 
+    - I want to perform a transaction
+    - I want to deposit money into my account
+    - I want to withdraw money for a purchase
+    - I want to authenticate an online transacction
+    - Deposit
+    - Withdraw
+    - Deposit into my savings account
+    - withdraw from my savings account
+    - Is there enough balance in my account
+    - Can I perform a transaction?
+    - Let's perform a transaction
+- intent: debit
+  examples: |
+    - I want to withdraw [5000 rupees](amount)
+    - Need to debit [4000 rupees](amount) for a transaction
+    - The amount [10000 rupees](amount) has to be withdrawn
+    - Debit from account [100000 rupees](amount)
+    - subtract from balance [1000 rupees](amount)
+- intent: credit
+  examples: |
+    - I want to deposit into my account [1000 rupees](amount)
+    - Credit to my account [7000 rupees](amount)
+    - Add to my balance [9000 rupees](amount)
+    - deposit [500 rupees](amount)
+    - Need to deposit [6000 rupees](amount)
+- intent: balance
+  examples: |
+    - please display my account balance
+    - display balance
+    - how much balance is available?
+    - please tell me the balance status
+    - I need the balance info
+- intent: fixed_deposit
+  examples: |
+    - What is the ROI going on for Fixed deposits?
+    - What can I do for fixed deposits?
+    - Any recent fixed deposits schemes?
+    - Fixed deposits
+    - What can you tell me about fixed deposits
+- intent: large_cap
+  examples: |
+    - large cap funds
+    - show me large cap funds
+    - what large cap funds can I invest in
+- intent: small_cap
+  examples: |
+    - small cap funds
+    - show me small cap funds
+    - what small cap funds can I invest in
+- intent: multi_cap
+  examples: |
+    - multi cap funds
+    - show me multi cap funds
+    - what multi cap funds can I invest in
+- intent: mid_cap
+  examples: |
+    - muid cap funds
+    - show me mid cap funds
+    - what mid cap funds can I invest in
+- intent: extra_info
+  examples: |
+    - yes i would like to know
+    - yes
+    - yes I want the rate of interest
+    - whats the rate of interest
+    - yes please show
+- intent: mutual_fund
+  examples: |
+    - I want to discuss Portfolio Management Strategies
+    - What are the Mutual Fund Schemes that you offer?
+    - What funds should i pick for investment
+    - need some guidance for picking Mutual Funds
+    - What can you tell me about portfolio enhancement
