@@ -45,8 +45,8 @@ class ActionMobile(Action):
         #mycursor.execute("SELECT account_no FROM account_data ORDER BY id DESC LIMIT 0,1")
         y = mycursor.fetchone()
         if x!=None and y==None:
-            client = Client('AC2afd3bcf5d81ab07b23939997f6a4c73', 'c1c700fe06989ac152912f14bbd6665a')
-            verify = client.verify.services('VAf62b701da03f80654635296039794718')
+            client = Client()
+            verify = client.verify.services()
             verify.verifications.create(to=main, channel='sms')
             dispatcher.utter_message("Please enter the OTP sent to you in the format 'otp XXXXXX'")
         else:
@@ -59,8 +59,8 @@ class ActionOtp(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         otp = tracker.get_slot('otp')
-        client = Client('AC2afd3bcf5d81ab07b23939997f6a4c73', 'c1c700fe06989ac152912f14bbd6665a')
-        verify = client.verify.services('VAf62b701da03f80654635296039794718')
+        client = Client()
+        verify = client.verify.services()
         result = verify.verification_checks.create(to=main, code=str(otp))
         if result.status=='approved':
             dispatcher.utter_message("Hurray! You have been authenticated")
